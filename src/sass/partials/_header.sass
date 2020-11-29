@@ -1,0 +1,81 @@
+header
+    position: relative
+    background-color: $firstColor
+    @include boxShadow(0 1px 5px 0 darken($firstColor, 10%))
+    z-index: 99
+
+    .header__container
+        height: 70px
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: center
+
+    .header__logo
+        margin-right: 25px
+
+        img
+            max-width: 150px
+
+    .header__nav,
+    .navigation,
+    .main__menu,
+    .main__menu--item
+        height: 100%
+        display: flex
+        align-items: center
+
+    .header__nav
+        flex-flow: row nowrap
+        justify-content: space-between
+        overflow-x: auto
+
+    .main__menu
+        .main__menu--item
+            position: relative
+            font-family: 'Corbel-Regular', sans-serif
+            color: lighten($secondColor, 34%)
+            background-color: transparent
+            width: max-content
+            margin: 0 1px
+            padding: 0 15px
+            text-align: center
+            cursor: pointer
+            z-index: 101
+
+        & > .router-link-exact-active
+            font-family: 'Corbel-Bold', sans-serif
+            color: $baseColor
+            background-color: darken($firstColor, 4%)
+            @include boxShadow((-1px -1px 2px 0 darken($firstColor, 10%), 1px -1px 2px 0 darken($firstColor, 10%)))
+
+        .sub__menu
+            display: none
+            position: absolute
+            top: 100%
+            left: 0
+            width: max-content
+            background-color: darken($firstColor, 4%)
+            @include boxShadow(0 1px 3px 0 darken($firstColor, 10%))
+            z-index: 100
+
+            .sub__menu--item
+                font-family: 'Corbel-Regular', sans-serif
+                color: lighten($secondColor, 34%)
+                padding: 15px
+                border-bottom: 1px solid darken($firstColor, 8%)
+
+        .opend_sub_menu
+            display: block
+
+    .search,
+    .languages
+        margin: 0 15px
+
+    .search
+        .search__icon
+            cursor: pointer
+
+    .languages
+        .languages__item
+            cursor: pointer

@@ -1,0 +1,93 @@
+.officers
+    padding: 25px 0 50px 0
+    background-color: $firstColor
+
+.officers__title
+    color: $secondColor
+
+.officers__list
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 25px
+
+.officers__list--active_officer
+    @include boxShadow(0 1px 3px darken($firstColor, 25%))
+    border-radius: 0 0 3px 3px
+
+    .active_officer__img
+        position: relative
+        height: max-content
+        max-height: 450px
+        overflow: hidden
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    .active_officer__info
+        font-family: 'Corbel-Bold', sans-serif
+        padding: 25px
+
+        h3
+            font-size: 22px
+            color: $secondColor
+            margin-bottom: 5px
+
+        span
+            color: $baseColor
+
+        p
+            color: lighten($secondColor, 50%)
+            line-height: 1.3em
+            max-width: 500px
+            margin: 15px 0
+
+        .hr
+            border-top: 1px solid darken($firstColor, 10%)
+
+        .socials
+            margin-top: 20px
+
+            li
+                display: inline-block
+                margin-right: 5px
+
+                a
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 25px
+                    height: 25px
+                    border-radius: 50%
+                    color: $firstColor
+                    background-color: $secondColor
+
+                    svg
+                        font-size: 12px
+
+.officers__list--menu
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 10px
+    cursor: pointer
+
+    .officers__list--menu-item
+        font-family: 'Corbel-Bold', sans-serif
+        text-align: center
+        margin-bottom: 10px
+
+        img
+            width: 100%
+            object-fit: cover
+
+        h3
+            color: $secondColor
+            margin: 10px 0 5px 0
+
+        span
+            color: $baseColor
+
+@media screen and (max-width: 992px)
+    .officers__list
+        grid-template-columns: 1fr

@@ -1,0 +1,38 @@
+.partners
+    background-color: $baseColor
+    padding: 25px 0 50px 0
+
+.section__title.partners__title
+    .section__title--divider
+        background-color: $firstColor
+
+        &::before,
+        &::after
+            background-color: $firstColor
+
+@keyframes partners_logos_animation
+    from
+        transform: translateX(0)
+
+    to
+        transform: translateX(100%)
+
+.partners__slider
+    overflow: hidden
+
+    .partners__slider--logos
+        position: relative
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: center
+        left: -100%
+        animation: 10s linear 1s infinite alternate running partners_logos_animation
+
+        .partners__slider--logos-logo
+            display: inline-block
+            margin: 0 15px
+            cursor: pointer
+
+    .pause_animation
+        animation-play-state: paused

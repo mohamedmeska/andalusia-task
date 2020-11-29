@@ -1,0 +1,46 @@
+.statistics
+    background: url('../assets/images/overview-back.png') center center / cover no-repeat
+    padding: 25px 0 50px 0
+
+.statistics__list
+    color: $firstColor
+    max-width: 920px
+    margin: 0 auto
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    
+.statistics__list--item
+    text-align: center
+    cursor: pointer
+
+    &:hover
+        .statistics__list--item-icon
+            color: lighten($baseColor, 10%)
+
+    .statistics__list--item-icon
+        width: 60px
+        height: 60px
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 2px solid $firstColor
+        border-radius: 5px
+        margin-bottom: 25px
+        transition: all .3s ease-in-out
+
+    .statistics__list--item-counter
+        font-family: 'Corbel-Bold', sans-serif
+        font-size: 20px
+        margin-bottom: 10px
+
+    .statistics__list--item-title
+        font-family: 'Corbel-Regular', sans-serif
+
+@media screen and (max-width: 540px)
+    .statistics__list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 25px
+        justify-items: center

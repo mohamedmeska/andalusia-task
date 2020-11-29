@@ -1,0 +1,29 @@
+// start importing the patials files
+@import 'partials/pre/variables'
+@import 'partials/pre/reset'
+@import 'partials/pre/fonts'
+@import 'partials/pre/mixins'
+@import 'partials/pre/general'
+// end importing the patials files
+
+body
+	position: relative
+	background-color: $firstColor
+
+	&::-webkit-scrollbar
+		width: 10px
+		background-color: $firstColor
+
+	&::-webkit-scrollbar-thumb
+		width: 10px
+		background-color: $secondColor
+
+@import 'partials/header'
+@import 'partials/footer'
+@import 'partials/home/slider'
+@import 'partials/home/services'
+@import 'partials/home/overview'
+@import 'partials/home/officers'
+@import 'partials/home/statistics'
+@import 'partials/home/news'
+@import 'partials/home/partners'

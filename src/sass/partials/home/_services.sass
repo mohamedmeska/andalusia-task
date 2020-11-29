@@ -1,0 +1,73 @@
+.services
+    position: relative
+    background-image: url('../assets/images/services-back.png')
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    background-attachment: fixed
+    padding: 50px 0 100px 0
+    overflow: hidden
+
+.services__title
+    color: $secondColor
+
+.services__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 15px
+    justify-items: center
+    margin-top: 100px
+
+.services__list--item
+    max-width: 300px
+    margin-bottom: 25px
+    text-align: center
+    cursor: pointer
+
+    &:hover
+        .services__list--item-icon
+            transform: translateY(-10px)
+            @include boxShadow(6px 2px 0 0 #ddc2db)
+
+    .services__list--item-icon
+        width: 75px
+        height: 75px
+        border-radius: 50%
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+        background-image: linear-gradient(to right, #f1435a , #eb683f)
+        @include boxShadow(none)
+        transform-origin: 50% 50%
+        transition: all .3s ease-in-out
+        
+        img
+            width: 60%
+
+    h3
+        font-family: 'Helvetica-Regular', sans-serif
+        color: lighten($secondColor, 40%)
+        margin: 15px 0 5px 0
+
+    p
+        font-family: 'Corbel-Regular', sans-serif
+        color: lighten($secondColor, 50%)
+
+.view-more-services
+    font-family: 'Corbel-Regular', sans-serif
+    color: darken($firstColor, 25%)
+    background-color: transparent
+    display: block
+    margin: 0 auto
+    padding: 7px 25px
+    border: 1px solid darken($firstColor, 25%)
+    border-radius: 5px
+    cursor: pointer
+    transition: all .3s ease-in-out
+
+    &:hover
+        color: darken($firstColor, 50%)
+
+@media screen and (max-width: 540px)
+    .services__list
+        grid-template-columns: repeat(1, 1fr)

@@ -1,0 +1,53 @@
+.news
+    padding: 25px 0 50px 0
+    background-color: $firstColor
+
+.news__title
+    color: $secondColor
+
+.news__list
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-gap: 15px
+
+.news__list--item
+    border: 1px solid darken($firstColor, 10%)
+    @include boxShadow(0 1px 2px 0 darken($firstColor, 10%))
+
+    .news__list--item-img
+        img
+            width: 100%
+
+    .news__list--item-info
+        padding: 25px
+
+        h3
+            font-family: 'Helvetica-Bold', sans-serif
+            color: $secondColor
+            margin-bottom: 5px
+
+        span
+           font-family: 'Helvetica-Regular', sans-serif 
+           font-size: 14px
+           color: lighten($secondColor, 50%)
+
+        p
+            font-family: 'Helvetica-Regular', sans-serif
+            font-size: 16px
+            line-height: 1.3em
+            color: lighten($secondColor, 25%)
+            margin-top: 10px
+
+        .read_more
+            font-family: 'Corbel-Regular', sans-serif
+            font-size: 17px
+            color: $firstColor
+            background-color: $baseColor
+            display: block
+            width: max-content
+            text-align: center
+            margin-top: 20px
+            padding: 10px 25px
+            border: none
+            cursor: pointer
+

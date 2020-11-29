@@ -1,0 +1,39 @@
+.container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 15px
+
+.section__title
+    position: relative
+    font-family: 'Corbel-Bold', sans-serif
+    font-size: 22px
+    color: $firstColor
+    margin-bottom: 50px
+    text-align: center
+
+    .section__title--divider
+        position: absolute
+        top: 35px
+        left: 50%
+        transform: translateX(-50%)
+        width: 35px
+        height: 5px
+        background-color: $baseColor
+
+        &::before,
+        &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 0
+            height: 5px
+            background-color: $baseColor
+
+        &::before
+            left: -10px
+            width: 5px
+            transform: rotate(45deg)
+
+        &::after
+            right: -15px
+            width: 10px

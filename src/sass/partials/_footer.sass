@@ -1,0 +1,77 @@
+footer
+    padding: 25px 0
+    background-color: lighten($secondColor, 21%)
+
+    .footer__title
+        padding: 15px 0
+        border-bottom: 1px solid lighten($secondColor, 25%)
+
+        h2
+            font-family: 'Rufina-Regular'
+            font-size: 22px
+            color: $firstColor
+
+    .footer__sections
+        display: flex
+        flex-flow: row wrap
+        margin-top: 40px
+
+        .footer__section
+            font-family: 'MyriadPro-Regular', sans-serif
+            min-width: 250px
+            margin: 0 25px 25px 0
+
+            &--title
+                color: $firstColor
+                margin-bottom: 25px
+
+            &--menu
+                &-item
+                    font-size: 14px
+                    color: lighten($secondColor, 50%)
+                    margin-bottom: 12px
+                    cursor: pointer
+                    transition: all .3s ease-in-out
+
+                    &:last-child
+                        margin-bottom: 0
+
+                    &:hover
+                        color: lighten($secondColor, 65%)
+
+        .section__form__copyright
+            flex-grow: 1
+            
+            form
+                display: flex
+                max-width: 500px
+                margin-bottom: 50px
+
+                input[type='email']
+                    flex-grow: 1
+                    font-family: 'Sintony-Regular', sans-serif
+                    color: lighten($secondColor, 50%)
+                    padding: 10px 15px
+                    min-width: 105px
+
+                input[type='submit']
+                    font-family: 'Sintony-Bold', sans-serif
+                    color: #ffffff
+                    background-color: $baseColor
+                    padding: 10px 25px
+                    border: none
+                    cursor: pointer
+
+            .copyright
+                font-size: 14px
+                color: lighten($secondColor, 50%)
+                margin-bottom: 15px
+
+            .socials
+                display: flex
+
+                li
+                    margin-right: 10px
+                    
+                    a
+                        color: lighten($secondColor, 50%)
